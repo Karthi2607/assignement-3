@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+#define PI 3.14159
+
+// Function to find diameter of a circle
+double diameter(double radius) {
+    return 2 * radius;
+}
+
+// Function to find circumference of a circle
+double circumference(double radius) {
+    return 2 * PI * radius;
+}
+
+
+double area(double radius) {
+    return PI * radius * radius;
+}
+
+int main() {
+    double radius;
+    printf("Enter the radius of the circle: ");
+    scanf("%lf", &radius);
+
+    double diam = diameter(radius);
+    printf("The diameter of the circle is: %.2lf\n", diam);
+
+    double circ = circumference(radius);
+    printf("The circumference of the circle is: %.2lf\n", circ);
+
+    double ar = area(radius);
+    printf("The area of the circle is: %.2lf\n", ar);
+
+    return 0;
+}
