@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+// Function to find the maximum of two numbers
+int max(int num1, int num2) {
+    return (num1 > num2) ? num1 : num2;
+}
+
+// Function to find the minimum of two numbers
+int min(int num1, int num2) {
+    return (num1 < num2) ? num1 : num2;
+}
+
+int main() {
+    int num, count, maximum, minimum;
+
+    // Input the number of elements
+    printf("Enter the number of elements: ");
+    scanf("%d", &count);
+
+    // Input the first element
+    printf("Enter element 1: ");
+    scanf("%d", &num);
+
+    // Initialize the maximum and minimum values to the first element
+    maximum = minimum = num;
+
+    // Input the remaining elements and update the maximum and minimum values
+    for (int i = 2; i <= count; i++) {
+        printf("Enter element %d: ", i);
+        scanf("%d", &num);
+        maximum = max(maximum, num);
+        minimum = min(minimum, num);
+    }
+
+    // Print the maximum and minimum values
+    printf("Maximum element is: %d\n", maximum);
+    printf("Minimum element is: %d\n", minimum);
+
+    return 0;
+}
